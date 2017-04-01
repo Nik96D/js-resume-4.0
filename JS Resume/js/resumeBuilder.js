@@ -17,11 +17,11 @@
 var work = {
   "jobs": [
     {
-      "employer": "Udacity Web Developer Nanodegree",
+      "employer": "Front-End Web Developer Nanodegree, Udacity",
       "title": "Web Developer Nanodegree",
       "location": "www.udacity.com",
       "dates": "Feb 2016",
-      "description": "A Nanodegree program is an innovative curriculum path that is outcome-based. Courses are built with industry leaders like Google, AT&T, and Facebook, and are taught by leading subject matter experts. Students benefit from personalized mentoring and Graduates earn an industry-recognized Degree.",
+      "description": "HTML/CSS, JavaScript, Knockout, Bootsstrap, AJAX, jQuery, Object Oriented Programming, Test driven Development with Jasmine, JSON, Website Performace Optimization",
       "image": "http://www.clker.com/cliparts/d/L/P/X/z/i/no-image-icon-md.png"
     },
   ]
@@ -109,7 +109,7 @@ var education = {
 };
 
 bio.display = function() {
-    var formattedRole = HTMLheaderRole.replace("%data%", "Front-End Software-Developer");
+    var formattedRole = HTMLheaderRole.replace("%data%", "Software-Engineer");
     $("#header").prepend(formattedRole);
     var formattedName = HTMLheaderName.replace("%data%", "Niklas Donges");
     $("#header").prepend(formattedName);
@@ -160,15 +160,15 @@ work.display = function() {
 for (var i= 0; i < work.jobs.length; i++) {
     $("#workExperience").append(HTMLworkStart);
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
-    var formattedEmployerTitle = formattedEmployer + formattedTitle;
-    $(".work-entry:last").append(formattedEmployer);
-    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
+    //var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
+    //var formattedEmployerTitle = formattedEmployer + formattedTitle;
+    //$(".work-entry:last").append(formattedEmployer);
+    //var formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
     //$(".work-entry:last").append(formattedDates);
     //var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
     //$(".work-entry:last").append(formattedLocation);
     var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
-    $(".work-entry:last").append(formattedDescription);  
+    //$(".work-entry:last").append(formattedDescription);  
    
     
 }
@@ -232,4 +232,3 @@ bio.display();
 work.display();
 projects.display();
 education.display();
-
